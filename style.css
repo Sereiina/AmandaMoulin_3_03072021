@@ -1,0 +1,54 @@
+@media (min-width: 900px) {
+  .headLogo {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid black 1px;
+  }
+
+  .localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+  }
+  .localisation > p {
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 25px;
+  }
+
+  .posIcon {
+    font-size: 25px;
+  }
+
+  .reservContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reservTitle {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .reservSubTitle {
+    font-size: 45px;
+  }
+
+  .imgLogo {
+    max-width: 300px;
+  }
+
+  .restauBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MenuImg {
+    width: 900px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
