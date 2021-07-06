@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", serif;
+}
+
 @media (min-width: 900px) {
   .headLogo {
     display: flex;
@@ -9,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: #eaeaea;
   }
   .localisation > p {
     font-size: 35px;
@@ -25,6 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f6f6f6;
   }
 
   .reservTitle {
@@ -40,14 +47,95 @@
     max-width: 300px;
   }
 
-  .restauBody {
+  .MenuImg {
+    width: 900px;
+  }
+
+  .ButtonPink {
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    color: white;
+    width: 500px;
+    height: 110px;
+    border-radius: 70px;
+    font-size: 35px;
+    border: none;
+  }
+
+  .containerfonction {
+    background-color: #f6f6f6;
+    font-size: 40px;
+    min-width: 850px;
+    min-height: 160px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .containerfonction > p {
+    font-weight: bold;
+    margin-right: 50px;
+  }
+
+  .containerDegust {
+    background-color: #f5edff;
+    font-size: 40px;
+    min-width: 850px;
+    min-height: 160px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .containerDegust > p {
+    font-weight: bold;
+    margin-right: 50px;
+  }
+
+  .fonctionTitle {
+    font-size: 40px;
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+  }
+
+  .fonctionList {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .MenuImg {
-    width: 900px;
+  .fonctionIcon {
+    margin-right: 60px;
+    color: grey;
+  }
+
+  .fonctionNum {
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #9356DC;
+    border: 1px solid black;
+  }
+
+  .storeIcon {
+    color: #9356DC;
+    margin-right: 60px;
+  }
+
+  .restauBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+  }
+
+  .footerPage {
+    background-color: #353535;
   }
 }
 

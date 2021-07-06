@@ -1,0 +1,29 @@
+@mixin pinkButton {
+        background: linear-gradient(0deg, $purple, $pink );
+        color: white;
+        width: 500px;
+        height: 110px;
+        border-radius: 70px;
+        font-size: 35px;
+        border: none;
+}
+@mixin Shrikhand {
+    font-family: 'Shrikhand' , serif;
+}
+
+@mixin FonctionneList {
+        font-size: 40px;
+        min-width: 850px; 
+        min-height: 160px;
+        margin-bottom: 50px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center; 
+        > p 
+        {
+            font-weight: bold;
+            margin-right: 50px;
+        }
+}

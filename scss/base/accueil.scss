@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
+
+    body 
+    {
+        font-family: 'Roboto' , serif;
+    }
+    
+@media (min-width: 900px) /*mobile*/ 
+{
+    .headLogo 
+    {
+        display: flex;
+        justify-content: center;
+        border-bottom: solid black 1px;
+    }
+    .localisation 
+    {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        background-color: $grisSombre;
+        > p
+            {
+                font-size: 35px;
+                font-weight: bold;
+                margin-left: 25px;
+            }
+    }
+    .posIcon 
+    {
+        font-size: 25px;
+    }
+    .reservContainer 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $grisClair;
+    }
+    .reservTitle 
+    {
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .reservSubTitle
+    {
+        font-size: 45px;
+    }
+    .imgLogo 
+    {
+        max-width: 300px;
+    }
+    .MenuImg 
+    {
+        width: 900px;
+    }
+    .ButtonPink {
+        @include pinkButton;
+    }
+    .containerfonction 
+    {
+        background-color: $grisClair;
+        @include FonctionneList;
+    }
+    .containerDegust 
+    {
+        background-color: $prune;
+         @include FonctionneList;
+    }
+    .fonctionTitle {
+        font-size: 40px;
+        display: flex;
+        align-items:flex-start;
+        font-weight: bold;
+    }
+    .fonctionList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fonctionIcon 
+    {
+        margin-right: 60px;
+        color: grey;
+    }
+    .fonctionNum 
+    {
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: $purple;
+        border: 1px solid black ;
+    }
+    .storeIcon
+    {
+        color: $purple;
+        margin-right: 60px;
+    }
+    .restauBody 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $grisClair;
+    }
+    
+
+
+    .footerPage 
+    {
+        background-color: $Noir;
+    }
+}
