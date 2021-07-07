@@ -10,7 +10,7 @@
         <nav>
             <header>
                 <div class="headLogo">
-                    <a href="#"><img class="imgLogo" src="img/logo/ohmyfood.png" alt=""></a>
+                    <a href="#" class="Logo">ohmyfood</a>
                 </div>
             </header>
         </nav>
@@ -22,7 +22,8 @@
                 </div>
             <article>
                 <div class="reservContainer">
-                    <h1 class="reservTitle">Réservez le menu qui vous convient</h1>
+                    <h1 class="reservTitle">Réservez le menu qui <br>
+                    vous convient</h1>
                     <h2 class="reservSubTitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</h2>
                     <input class="ButtonPink" type="button" value="Explorer nos restaurants">
                 </div>
@@ -55,12 +56,15 @@
         <section>
             <article >
                 <div class="restaurantTitle">
-                    <h1 >restaurants</h1>
+                    <h1>Restaurants</h1>
                 </div>
                 <div class="restauBody">
                     <div class="restauName">
                         <a class="restauFrame" href="pages_menu/LaPaletteDuGout.html">
                         <img class="MenuImg" src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                            <span class="blocNew">
+                                <p>Nouveau</p>
+                            </span>
                         <div class="menuTitle"> 
                             <h4>La palette du goût</h4>
                             <div class="heartIcon"><span class="far fa-heart"></span></div>
@@ -71,6 +75,9 @@
                     <div class="restauName">
                         <a class="restauFrame" href="pages_menu/LaNoteEnchantee.html">
                         <img class="MenuImg" src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                        <span class="blocNew">
+                            <p>Nouveau</p>
+                        </span>
                         <div class="menuTitle">
                             <h4>La note enchantée</h4>
                             <div class="heartIcon"><span class="far fa-heart"></span></div>
@@ -103,14 +110,24 @@
         </section>
         <footer class="footerPage">
             <div>
-                <h2 class="footerLogo">ohmyfood</h2>
+                <span class="footerLogo">ohmyfood</span>
             </div>
-            <div class="footText">
-                <div class="ustensilsIcon, footLink"><span class="fas fa-utensils"></span><a class="footLink" href="#">Proposer un restaurant</a></div> <!--Surement plus simple a faire-->
-                <div class="handsIcons, footLink"><span class="fas fa-hands-helping"></span><a class="footLink" href="#">Devenir partenaire</a></div>
-                <a class="footLink" href="#">Mentions légales</a>
-                <a class="footLink" href="#">Contact</a>
-            </div>
+            <ul class="containerList">
+                <li class="footerList">
+                    <span class="fas fa-utensils footIcon"></span>
+                    <a href="#" class="footText">Proposer un restaurant</a>
+                </li>
+                <li class="footerList">
+                    <span class="fas fa-hands-helping footIcon"></span>
+                    <a href="#" class="footText">Devenir partenaire</a>
+                </li>
+                <li class="footerList">
+                    <a href="#" class="footText">Mentions légales</a>
+                </li>
+                <li class="footerList">
+                    <a href="#" class="footText">Contact</a>
+                </li>
+            </ul>
         </footer>
     </body>
 </html>

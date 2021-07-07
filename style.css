@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap%27");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", serif;
   margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 @media (min-width: 900px) {
@@ -14,8 +18,11 @@ body {
     border-bottom: solid black 1px;
   }
 
-  .imgLogo {
-    max-width: 300px;
+  .Logo {
+    font-family: "Shrikhand", serif;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
   }
 
   .localisation {
@@ -26,7 +33,6 @@ body {
   }
   .localisation > p {
     font-size: 45px;
-    font-weight: bold;
     margin-left: 25px;
   }
 
@@ -40,16 +46,17 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #f6f6f6;
+    text-align: center;
   }
 
   .reservTitle {
     font-size: 60px;
-    font-weight: bold;
     width: 65%;
   }
 
   .reservSubTitle {
     font-size: 45px;
+    font-weight: normal;
   }
 
   .ButtonPink {
@@ -102,7 +109,6 @@ body {
     margin-top: 40px;
     display: flex;
     align-items: flex-start;
-    font-weight: bold;
   }
 
   .fonctionList {
@@ -118,12 +124,17 @@ body {
   }
 
   .fonctionNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
     background-color: #9356DC;
-    border: 1px solid black;
+    border: 1px solid none;
+    position: relative;
+    left: -30px;
   }
 
   .storeIcon {
@@ -132,7 +143,7 @@ body {
   }
 
   .restauBody {
-    height: 3250px;
+    height: 3350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,14 +174,11 @@ body {
     text-decoration: none;
     font-size: 35px;
   }
-  .restauFrame > h4 {
-    margin-bottom: 0px;
-    font-weight: bold;
-    color: black;
-  }
   .restauFrame > p {
     color: black;
     margin-top: 0px;
+    font-size: 45px;
+    margin: 0 0 40px 35px;
   }
 
   .menuTitle {
@@ -179,11 +187,16 @@ body {
     justify-content: space-between;
     flex-direction: row;
   }
+  .menuTitle > h4 {
+    color: black;
+    font-size: 55px;
+    margin: 5px 0 10px 35px;
+  }
 
   .heartIcon {
     font-size: 80px;
     margin-right: 80px;
-    margin-top: 60px;
+    margin-top: 30px;
     /* animation */
   }
 
@@ -194,32 +207,55 @@ body {
     border-radius: 30px 30px 0 0;
   }
 
+  .blocNew {
+    border-radius: 5px;
+    width: 200px;
+    height: 70px;
+    color: #098d6d;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -450px;
+    right: -675px;
+  }
+  .blocNew > p {
+    margin: 0;
+  }
+
   .footerPage {
     height: 400px;
     margin: 0;
+    padding: 50px;
     background-color: #353535;
+  }
+
+  .containerList {
+    padding: 0;
   }
 
   .footerLogo {
     font-family: "Shrikhand", serif;
-    font-size: 45px;
-    margin-left: 30px;
+    font-size: 55px;
     color: white;
+  }
+
+  .footerList {
+    list-style: none;
+    margin-bottom: 15px;
   }
 
   .footText {
-    font-size: 40px;
-    margin-left: 30px;
-  }
-
-  .footLink {
-    display: flex;
+    font-size: 50px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-right: 15px;
-    align-items: center;
+  }
+
+  .footIcon {
+    width: 60px;
+    font-size: 40px;
+    color: white;
   }
 }
 

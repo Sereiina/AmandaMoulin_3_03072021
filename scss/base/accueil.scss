@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 
     body 
@@ -6,9 +6,13 @@
         font-family: 'Roboto' , serif;
         margin: 0px;
     }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
     
 @media (min-width: 900px) /*mobile*/ 
 {
+    
     .headLogo 
     {
         min-height: 150px;
@@ -17,12 +21,15 @@
         justify-content: center;
         border-bottom: solid black 1px;
     }
-    .imgLogo 
+    .Logo 
     {
-        max-width: 300px;
+        font-family: 'Shrikhand' , serif;
+        font-size: 80px;
+        text-decoration: none;
+        color: black;
     }
     .localisation 
-    {
+    { 
         display: flex; 
         justify-content: center;
         align-items: center;
@@ -30,7 +37,6 @@
         > p
             {
                 font-size: 45px;
-                font-weight: bold;
                 margin-left: 25px;
             }
     }
@@ -45,16 +51,18 @@
         flex-direction: column;
         align-items: center;
         background-color: $grisClair;
+        text-align: center;
     }
     .reservTitle 
     {
         font-size: 60px;
-        font-weight: bold;
+        
         width: 65%;
     }
     .reservSubTitle
     {
         font-size: 45px;
+        font-weight: normal;
     }
     
     .ButtonPink {
@@ -76,7 +84,6 @@
         margin-top: 40px;
         display: flex;
         align-items:flex-start;
-        font-weight: bold;
     }
     .fonctionList {
         min-height: 750px;
@@ -91,12 +98,17 @@
     }
     .fonctionNum 
     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 30px;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
         background-color: $purple;
-        border: 1px solid black ;
+        border: 1px solid none;
+        position: relative;
+        left: -30px;
     }
     .storeIcon
     {
@@ -105,7 +117,7 @@
     }
     .restauBody 
     {
-        height: 3250px;
+        height: 3350px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -116,7 +128,8 @@
         display: flex;
         justify-content: flex-start;
         background-color: $grisClair;
-        > h1 {
+        > h1 
+        {
             margin-bottom: 15px;
             margin-left: 30px;
             margin-top: 100px;
@@ -134,14 +147,12 @@
         flex-direction: column;
         text-decoration: none;
         font-size: 35px;
-        > h4 {
-            margin-bottom: 0px;
-            font-weight: bold;
-            color: black;
-        }
-        > p {
+        > p 
+        {
             color: black;
             margin-top: 0px;
+            font-size: 45px;
+            margin: 0 0 40px 35px;
         }
     }
     .menuTitle {
@@ -149,12 +160,18 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
+        > h4 
+        {
+            color: black;
+            font-size: 55px;
+            margin: 5px 0 10px 35px;
+        }
     }
     .heartIcon
     {
         font-size: 80px;
         margin-right: 80px;
-        margin-top: 60px;
+        margin-top: 30px;
         /* animation */
     }
     .MenuImg
@@ -164,26 +181,43 @@
         object-fit: cover;
         border-radius: 30px 30px 0 0;
     }
+    .blocNew
+    {  
+        @include NotifNew;
+    }
 
     .footerPage 
     {
         height: 400px;
         margin: 0;
+        padding: 50px;
         background-color: $Noir;
+    }
+    .containerList {
+        padding: 0;
     }
     .footerLogo 
     {
         font-family: 'Shrikhand' , serif;
-        font-size: 45px;
-        margin-left: 30px;
+        font-size: 55px;
         color: white;
     }
-    .footText {
-        font-size: 40px; 
-          margin-left: 30px;
-    }
-    .footLink 
+    .footerList 
     {
-        @include footPage;
+        list-style: none;
+        margin-bottom: 15px;
     }
+    .footText 
+    {
+        font-size: 50px; 
+        text-decoration: none;
+        color: white;
+    }
+    .footIcon 
+    {
+        width: 60px;
+        font-size: 40px;
+        color: white;
+    }
+    
 }

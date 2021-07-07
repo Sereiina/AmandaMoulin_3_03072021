@@ -37,3 +37,20 @@
         margin-right: 15px;
         align-items: center;
 }
+@mixin NotifNew {
+        border-radius: 5px;
+        width: 200px;
+        height: 70px;
+        color: $darkGreen;
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -450px;
+        right: -675px;
+        > p 
+        {
+                margin: 0;
+        }
+}
