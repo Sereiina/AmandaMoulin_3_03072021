@@ -1,245 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap%27');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 
-    body 
-    {
-        font-family: 'Roboto' , serif;
-        margin: 0px;
+body {
+    font-family: "Roboto", serif;
+    margin: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+@media (max-width: 900px) /*mobile*/ {
+}
+@media (min-width: 900px) /*desktop*/ {
+    .restauName {
+        width: 30%;
     }
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: bold;
-    }
-    
-@media (min-width: 900px) /*mobile*/ 
-{
-    
-    .headLogo 
-    {
-        min-height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0px 5px 5px black;
-    }
-    .Logo 
-    {
-        font-family: 'Shrikhand' , serif;
-        font-size: 80px;
-        text-decoration: none;
-        color: black;
-    }
-    .localisation 
-    { 
-        display: flex; 
-        justify-content: center;
-        align-items: center;
-        background-color: $grisSombre;
-        > p
-            {
-                font-size: 45px;
-                margin-left: 25px;
-            }
-    }
-    .posIcon 
-    {
-        font-size: 25px;
-    }
-    .reservContainer 
-    {
-        min-height: 650px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $grisClair;
-        text-align: center;
-    }
-    .reservTitle 
-    {
-        font-size: 60px;
-        
-        width: 65%;
-    }
-    .reservSubTitle
-    {
+}
+
+.headLogo {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 5px black;
+}
+.Logo {
+    font-family: "Shrikhand", serif;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+}
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grisSombre;
+    > p {
         font-size: 45px;
-        font-weight: normal;
+        margin-left: 25px;
     }
-    
-    .ButtonPink {
-        @include pinkButton;
-    }
-    .containerfonction 
-    {
-        background-color: $grisClair;
-        @include FonctionneList;
-    }
-    .containerDegust 
-    {
-        background-color: $prune;
-         @include FonctionneList;
-    }
-    .fonctionTitle {
-        font-size: 40px;
-        margin-left: 50px;
-        margin-top: 40px;
-        display: flex;
-        align-items:flex-start;
-    }
-    .fonctionList {
-        min-height: 750px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .fonctionIcon 
-    {
-        margin-right: 60px;
-        color: grey;
-    }
-    .fonctionNum 
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        width: 70px;
-        height: 70px;
-        border-radius: 100px;
-        background-color: $purple;
-        position: relative;
-        left: -30px;
-    }
-    .storeIcon
-    {
-        color: $purple;
-        margin-right: 60px;
-    }
-    .restauBody 
-    {
-        height: 3350px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $grisClair;
-    }
-    .restaurantTitle {
-        font-size: 50px;
-        display: flex;
-        justify-content: flex-start;
-        background-color: $grisClair;
-        > h1 
-        {
-            margin-bottom: 15px;
-            margin-left: 30px;
-            margin-top: 100px;
-        }
-    }
-    .restauName
-    {
-        position: relative;
-        margin: 30px;
-        background-color: white;
-        border-radius: 30px;
-    }
-    .restauFrame 
-    {
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        font-size: 35px;
-        box-shadow: 0 10px 45px $grisSombre;
-        border-radius: 30px 30px 0 0;
-        > p 
-        {
-            color: black;
-            margin-top: 0px;
-            font-size: 45px;
-            margin: 0 0 40px 35px;
-        }
-    }
-    .menuTitle {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        > h4 
-        {
-            color: black;
-            font-size: 55px;
-            margin: 5px 0 10px 35px;
-        }
-    }
-    .heartIcon
-    {
-        font-size: 80px;
-    }
-    .heartOne 
-    {
-        color: black;
-        position: absolute;
-        right: 80px;
-        bottom: 70px;
-    }
-    .heartTwo 
-    {
-        opacity: 0;
-        
-        background: linear-gradient(0deg, $purple, $pink );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: absolute;
-        right: 80px;
-        bottom: 70px;
-        &:hover
-        {
-            opacity: 1;
-            
-        }
-    }
-    .MenuImg
-    { 
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        border-radius: 30px 30px 0 0;
-    }
-    .blocNew
-    {  
-        @include NotifNew;
-    }
+}
+.posIcon {
+    font-size: 25px;
+}
+.reservContainer {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $grisClair;
+    text-align: center;
+}
+.reservTitle {
+    font-size: 60px;
 
-    .footerPage 
-    {
-        height: 400px;
-        margin: 0;
-        padding: 50px;
-        background-color: $Noir;
-    }
-    .containerList {
-        padding: 0;
-    }
-    .footerLogo 
-    {
-        font-family: 'Shrikhand' , serif;
-        font-size: 55px;
-        color: white;
-    }
-    .footerList 
-    {
-        list-style: none;
+    width: 65%;
+}
+.reservSubTitle {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.ButtonPink {
+    @include pinkButton;
+}
+.containerfonction {
+    background-color: $grisClair;
+    @include FonctionneList;
+}
+.containerDegust {
+    background-color: $prune;
+    @include FonctionneList;
+}
+.fonctionTitle {
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+.fonctionList {
+    min-height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fonctionIcon {
+    margin-right: 60px;
+    color: grey;
+}
+.fonctionNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: $purple;
+    position: relative;
+    left: -30px;
+}
+.storeIcon {
+    color: $purple;
+    margin-right: 60px;
+}
+.restauBody {
+    height: 3350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $grisClair;
+}
+.restaurantTitle {
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: $grisClair;
+    > h1 {
         margin-bottom: 15px;
+        margin-left: 30px;
+        margin-top: 100px;
     }
-    .footText 
-    {
-        font-size: 50px; 
-        text-decoration: none;
-        color: white;
+}
+.restauName {
+    position: relative;
+    margin: 30px;
+    background-color: white;
+    border-radius: 30px;
+}
+.restauFrame {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 35px;
+    box-shadow: 0 10px 45px $grisSombre;
+    border-radius: 30px 30px 0 0;
+    > p {
+        color: black;
+        margin-top: 0px;
+        font-size: 45px;
+        margin: 0 0 40px 35px;
     }
-    .footIcon 
-    {
-        width: 60px;
-        font-size: 40px;
-        color: white;
+}
+.menuTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    > h4 {
+        color: black;
+        font-size: 55px;
+        margin: 5px 0 10px 35px;
     }
-    
+}
+.heartIcon {
+    font-size: 80px;
+    &:hover {
+        .heartEmpty {
+            opacity: 0;
+            transition: opacity $slowTrans;
+        }
+    }
+    transition: opacity $slowTrans;
+}
+.heartEmpty {
+    color: black;
+    position: absolute;
+    right: 80px;
+    bottom: 70px;
+    transition: opacity $slowTrans;
+}
+.heartFilled {
+    opacity: 0;
+    position: absolute;
+    right: 80px;
+    bottom: 70px;
+    transition: opacity $slowTrans;
+    &:hover {
+        background: linear-gradient(0deg, $purple, $pink);
+        -webkit-background-clip: text;
+        background-clip: text; 
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+        transition: opacity $basicTrans;
+    }
+}
+.MenuImg {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+.blocNew {
+    @include NotifNew;
+}
+
+.footerPage {
+    height: 400px;
+    margin: 0;
+    padding: 50px;
+    background-color: $noir;
+}
+.containerList {
+    padding: 0;
+}
+.footerLogo {
+    font-family: "Shrikhand", serif;
+    font-size: 55px;
+    color: white;
+}
+.footerList {
+    list-style: none;
+    margin-bottom: 15px;
+}
+.footText {
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+.footIcon {
+    width: 60px;
+    font-size: 40px;
+    color: white;
 }

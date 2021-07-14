@@ -55,3 +55,14 @@
                 margin: 0;
         }
 }
+
+//transition
+@mixin bTrans {
+        transition: $basicTrans;
+}
+@mixin sTrans {
+        transition: $slowTrans;
+}
+@mixin fTrans {
+        transition: $fastTrans;
+}
