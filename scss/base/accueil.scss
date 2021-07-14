@@ -13,9 +13,12 @@ h5,
 h6 {
     font-weight: bold;
 }
-@media (max-width: 900px) /*mobile*/ {
+@media screen and (max-width: 900px) /*mobile*/ {
+    .restauName {
+        width: 100%;
+    }
 }
-@media (min-width: 900px) /*desktop*/ {
+@media screen and (min-width: 900px) /*desktop*/ {
     .restauName {
         width: 30%;
     }
