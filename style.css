@@ -510,7 +510,7 @@ body::-webkit-scrollbar-thumb:focus {
   font-size: 1.5em;
   font-weight: 400;
   align-self: flex-end;
-  margin: 0 20px 15px 0;
+  margin: 0 4em 15px 0;
 }
 
 .dish-container {
@@ -521,6 +521,9 @@ body::-webkit-scrollbar-thumb:focus {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.dish-container:hover .dish-price-wrap {
+  transform: translateX(0);
 }
 
 .dish-description-container {
@@ -539,6 +542,13 @@ body::-webkit-scrollbar-thumb:focus {
 .dish-icon {
   font-size: 2em;
   align-self: center;
+  transform: rotate(-180deg);
+  transition: 0.3s ease;
+}
+
+.dish-price-wrap {
+  transition: 0.3s ease;
+  transform: translateX(69px) translateX(1em);
 }
 
 /*# sourceMappingURL=style.css.map */
