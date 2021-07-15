@@ -478,4 +478,67 @@ body::-webkit-scrollbar-thumb:focus {
   transition: 0.5s ease;
 }
 
+.backgroundImg {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+}
+
+.dish-title {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.dish-description {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0;
+  align-self: flex-end;
+  align-self: flex-start;
+}
+
+.dish-price-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+
+.dish-price {
+  font-size: 1.5em;
+  font-weight: 400;
+  align-self: flex-end;
+  margin: 0 20px 15px 0;
+}
+
+.dish-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dish-description-container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  margin: 15px;
+}
+
+.dish-validation-container {
+  background-color: #99E2D0;
+  color: white;
+  padding: 25px;
+}
+
+.dish-icon {
+  font-size: 2em;
+  align-self: center;
+}
+
 /*# sourceMappingURL=style.css.map */
