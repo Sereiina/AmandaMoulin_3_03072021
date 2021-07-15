@@ -18,18 +18,90 @@ h6 {
   .restauName {
     width: 100%;
   }
-}
-@media screen and (min-width: 900px) {
-  .restauName {
-    width: 30%;
+
+  .Logo {
+    font-size: 2.5em !important;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .footerLogo {
+    font-size: 1.5em !important;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .mq-wr {
+    flex-flow: column wrap;
   }
 }
+@media screen and (min-width: 900px) {
+  .nw {
+    flex-wrap: nowrap !important;
+  }
+
+  .containerfonction {
+    margin: 0 15px 40px 15px !important;
+  }
+
+  .restauName {
+    width: 30% !important;
+  }
+
+  .mq-wr {
+    flex-flow: row wrap;
+    justify-content: space-between !important;
+  }
+
+  .restauName {
+    margin: 15px !important;
+    min-width: 300px;
+    flex-grow: 1;
+  }
+
+  .blocNew {
+    font-size: 1em !important;
+  }
+}
+.mq-wr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.padder {
+  padding: 0px 20px 0px 20px;
+}
+
+.margUp {
+  margin-top: 30px;
+}
+
 .headLogo {
-  min-height: 150px;
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 5px 5px black;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .Logo {
@@ -46,16 +118,18 @@ h6 {
   background-color: #eaeaea;
 }
 .localisation > p {
-  font-size: 45px;
+  font-size: 1.5em;
   margin-left: 25px;
+  font-weight: 800;
 }
 
 .posIcon {
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 .reservContainer {
-  min-height: 650px;
+  min-height: fit-content;
+  padding: 0px 10px 40px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,79 +138,85 @@ h6 {
 }
 
 .reservTitle {
-  font-size: 60px;
-  width: 65%;
+  font-size: 2em;
+  margin: 40px 0px 0px 10px;
+  width: 100%;
 }
 
 .reservSubTitle {
-  font-size: 45px;
-  font-weight: normal;
+  font-size: 1.3em;
+  font-weight: 300;
+  margin: 10px 0px 40px 0px;
 }
 
 .ButtonPink {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   color: white;
-  width: 500px;
-  height: 110px;
+  height: fit-content;
   border-radius: 70px;
-  font-size: 35px;
+  font-size: 1.2em;
+  overflow-wrap: break-word;
   border: none;
+  padding: 20px 30px 20px 30px;
+  transition: 0.3s ease;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+}
+.ButtonPink:hover {
+  opacity: 0.69;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.3, -0.19, 0.17, 1.26);
+}
+
+.wrapper-function {
+  display: flex;
+  flex: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .containerfonction {
   background-color: #f6f6f6;
   font-size: 40px;
-  min-width: 850px;
-  min-height: 160px;
-  margin-bottom: 50px;
-  border-radius: 40px;
+  width: 100%;
+  margin: 0px 0px 40px 0px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 20px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  box-shadow: 0 10px 35px gray;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  font-size: 2em;
 }
 .containerfonction > p {
-  font-weight: bold;
+  font-weight: 800;
   margin-right: 50px;
+}
+
+.function-text {
+  font-size: 0.5em;
+  font-weight: 600;
+  margin-left: 10px;
 }
 
 .containerDegust {
   background-color: #f5edff;
-  font-size: 40px;
-  min-width: 850px;
-  min-height: 160px;
-  margin-bottom: 50px;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  box-shadow: 0 10px 35px gray;
-}
-.containerDegust > p {
-  font-weight: bold;
-  margin-right: 50px;
-}
-
-.fonctionTitle {
-  font-size: 40px;
-  margin-left: 50px;
-  margin-top: 40px;
-  display: flex;
-  align-items: flex-start;
 }
 
 .fonctionList {
-  min-height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 12.5px;
 }
 
 .fonctionIcon {
-  margin-right: 60px;
+  font-size: 0.7em;
+  width: 5%;
+  margin-right: 0px;
   color: grey;
+  display: flex;
+  justify-content: center;
 }
 
 .fonctionNum {
@@ -144,21 +224,34 @@ h6 {
   align-items: center;
   justify-content: center;
   color: white;
-  width: 70px;
-  height: 70px;
+  max-width: 25px;
+  max-height: 25px;
+  min-width: 25px;
+  min-height: 25px;
+  padding: 2px;
+  font-size: 0.4em;
+  font-weight: 300;
   border-radius: 100px;
   background-color: #9356DC;
   position: relative;
-  left: -30px;
+  left: -15px;
 }
 
 .storeIcon {
   color: #9356DC;
-  margin-right: 60px;
+  font-size: 0.7em;
+  width: 5%;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.restauTitle {
+  align-self: flex-start;
 }
 
 .restauBody {
-  height: 3350px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,31 +265,32 @@ h6 {
   background-color: #f6f6f6;
 }
 .restaurantTitle > h1 {
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-top: 100px;
+  margin: 100px 0px 0px 15px;
 }
 
 .restauName {
+  width: 100%;
   position: relative;
-  margin: 30px;
   background-color: white;
   border-radius: 30px;
+  overflow: hidden;
+  margin: 20px 0px 20px 0px;
 }
 
 .restauFrame {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  font-size: 35px;
   box-shadow: 0 10px 45px #eaeaea;
   border-radius: 30px 30px 0 0;
+  font-weight: 700;
 }
 .restauFrame > p {
   color: black;
   margin-top: 0px;
-  font-size: 45px;
-  margin: 0 0 40px 35px;
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0 0 30px 35px;
 }
 
 .menuTitle {
@@ -204,72 +298,111 @@ h6 {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  padding: 0 0 10px 0;
 }
-.menuTitle > h4 {
+
+.rf-marg {
+  margin-left: 20px;
+}
+
+.rf-Title {
   color: black;
-  font-size: 55px;
-  margin: 5px 0 10px 35px;
+  font-size: 1.5em;
+  margin: 20px 0px 10px 0px;
+}
+
+.rf-Text {
+  color: black;
+  font-size: 1em;
+  margin: 0;
+  margin: 0px 0px 10px 0px;
 }
 
 .heartIcon {
-  font-size: 80px;
-  transition: opacity 1s ease;
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  transition: opacity 0.5s ease;
+  margin-right: 20px;
 }
 .heartIcon:hover .heartEmpty {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
-
-.heartEmpty {
-  color: black;
-  position: absolute;
-  right: 80px;
-  bottom: 70px;
-  transition: opacity 1s ease;
-}
-
-.heartFilled {
-  opacity: 0;
-  position: absolute;
-  right: 80px;
-  bottom: 70px;
-  transition: opacity 1s ease;
-}
-.heartFilled:hover {
+.heartIcon:hover .heartFilled {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.heartEmpty {
+  color: black;
+  position: relative;
   transition: opacity 0.5s ease;
 }
 
-.MenuImg {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
+.heartFilled {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+
+.leDeliceImg {
+  background-image: url("img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.francaiseImg {
+  background-image: url("img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.enchanteeImg {
+  background-image: url("img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.duGoutImg {
+  background-image: url("img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.restauImg {
   border-radius: 30px 30px 0 0;
+  width: 100%;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s ease;
+}
+.restauImg:hover {
+  opacity: 0.69;
+  transition: 0.3s ease;
 }
 
 .blocNew {
   border-radius: 5px;
-  width: 200px;
-  height: 70px;
   color: #098d6d;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 45px;
-  right: 45px;
+  font-size: 2em;
+  padding: 10px 15px 10px 15px;
+  margin: 30px;
+  right: 0;
+  pointer-events: none;
 }
 .blocNew > p {
   margin: 0;
 }
 
 .footerPage {
-  height: 400px;
   margin: 0;
   padding: 50px;
   background-color: #353535;
@@ -291,15 +424,58 @@ h6 {
 }
 
 .footText {
-  font-size: 50px;
+  font-size: 1em;
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.616);
+  transition: 0.5s ease;
+}
+.footText:hover {
   color: white;
+  transition: 0.5s ease;
 }
 
 .footIcon {
-  width: 60px;
-  font-size: 40px;
+  width: 25px;
+  font-size: 1em;
   color: white;
+}
+
+.footIcon-container {
+  display: flex;
+  justify-content: center;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 5px solid rgba(128, 128, 128, 0);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: black;
+  border-radius: 20px;
+  border: 5px solid rgba(128, 128, 128, 0);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb:focus {
+  background-color: black;
+  border-radius: 20px;
+  border: 5px solid rgba(128, 128, 128, 0);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,23 +13,85 @@ h5,
 h6 {
     font-weight: bold;
 }
+// Media queries
 @media screen and (max-width: 900px) /*mobile*/ {
     .restauName {
         width: 100%;
     }
+    .Logo{
+        font-size: 2.5em !important;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .footerLogo{
+        font-size: 1.5em !important;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .mq-wr{
+        flex-flow:  column wrap;
+    }
 }
 @media screen and (min-width: 900px) /*desktop*/ {
+    .nw{
+        flex-wrap: nowrap !important;
+    }
+    .containerfonction{
+        margin: 0 15px 40px 15px !important;    
+    }
     .restauName {
-        width: 30%;
+        width: 30% !important;
+    }
+    .mq-wr{
+        flex-flow:  row wrap;
+        justify-content: space-between !important;
+    }
+    .restauName{
+        margin: 15px !important;
+        min-width: 300px;
+        flex-grow: 1;
+    }
+    .blocNew{
+        font-size:  1em !important;
     }
 }
 
+// Global props
+.mq-wr{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wrapper-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wrapper-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.title {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: flex-start;
+}
+.padder{
+    padding: 0px 20px 0px 20px;
+}
+.margUp{
+    margin-top: 30px;
+}
+
+// Nav
 .headLogo {
-    min-height: 150px;
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0px 3px 8px rgba($color: #000000, $alpha: 0.2);
 }
 .Logo {
     font-family: "Shrikhand", serif;
@@ -37,21 +99,27 @@ h6 {
     text-decoration: none;
     color: black;
 }
+
+// Localisation Header
 .localisation {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $grisSombre;
     > p {
-        font-size: 45px;
+        font-size: 1.5em;
         margin-left: 25px;
+        font-weight: 800;
     }
 }
 .posIcon {
-    font-size: 25px;
+    font-size: 1.5em;
 }
+
+// Reservation Header
 .reservContainer {
-    min-height: 650px;
+    min-height:fit-content;
+    padding: 0px 10px 40px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,61 +127,88 @@ h6 {
     text-align: center;
 }
 .reservTitle {
-    font-size: 60px;
-
-    width: 65%;
+    font-size: 2em;
+    margin: 40px 0px 0px 10px;
+    width: 100%;
 }
 .reservSubTitle {
-    font-size: 45px;
-    font-weight: normal;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 10px 0px 40px 0px;
 }
-
 .ButtonPink {
     @include pinkButton;
+}
+
+// HowTo(basics) Fonctionnement
+
+.wrapper-function{
+    display: flex;
+    flex: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 .containerfonction {
     background-color: $grisClair;
     @include FonctionneList;
+    font-size: 2em;
+}
+.function-text{
+    font-size: 0.5em;
+    font-weight: 600;
+    margin-left: 10px;
 }
 .containerDegust {
     background-color: $prune;
-    @include FonctionneList;
-}
-.fonctionTitle {
-    font-size: 40px;
-    margin-left: 50px;
-    margin-top: 40px;
-    display: flex;
-    align-items: flex-start;
 }
 .fonctionList {
-    min-height: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left:12.5px ;
 }
 .fonctionIcon {
-    margin-right: 60px;
+    font-size: 0.7em;
+    width: 5%;
+    margin-right: 0px;
     color: grey;
+    display: flex;
+    justify-content: center;
 }
 .fonctionNum {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    width: 70px;
-    height: 70px;
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    padding:2px;
+    font-size: 0.4em;
+    font-weight: 300;
     border-radius: 100px;
     background-color: $purple;
     position: relative;
-    left: -30px;
+    left: -15px;
 }
 .storeIcon {
     color: $purple;
-    margin-right: 60px;
+    font-size: 0.7em;
+    width: 5%;
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+//  Restaurants
+.restauTitle{
+    align-self: flex-start;
 }
 .restauBody {
-    height: 3350px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,29 +220,30 @@ h6 {
     justify-content: flex-start;
     background-color: $grisClair;
     > h1 {
-        margin-bottom: 15px;
-        margin-left: 30px;
-        margin-top: 100px;
+        margin:  100px 0px 0px 15px;
     }
 }
 .restauName {
+    width: 100%;
     position: relative;
-    margin: 30px;
     background-color: white;
     border-radius: 30px;
+    overflow: hidden;
+    margin: 20px 0px 20px 0px;
 }
 .restauFrame {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    font-size: 35px;
     box-shadow: 0 10px 45px $grisSombre;
     border-radius: 30px 30px 0 0;
+    font-weight: 700;
     > p {
         color: black;
         margin-top: 0px;
-        font-size: 45px;
-        margin: 0 0 40px 35px;
+        font-size: 2em;
+        font-weight: 400;
+        margin: 0 0 30px 35px;
     }
 }
 .menuTitle {
@@ -155,56 +251,105 @@ h6 {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    > h4 {
-        color: black;
-        font-size: 55px;
-        margin: 5px 0 10px 35px;
-    }
+    padding: 0 0 10px 0;
+}
+.rf-marg{
+    margin-left: 20px;
+}
+.rf-Title{
+    color: black;
+    font-size: 1.5em;
+    margin: 20px 0px 10px 0px;
+}
+.rf-Text{
+    color: black;
+    font-size: 1em;
+    margin: 0;
+    margin: 0px 0px 10px 0px;
 }
 .heartIcon {
-    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    transition: opacity $basicTrans;
+    margin-right: 20px;
     &:hover {
         .heartEmpty {
             opacity: 0;
-            transition: opacity $slowTrans;
+            transition: opacity $basicTrans;
+        }
+        .heartFilled{
+            background: linear-gradient(0deg, $purple, $pink);
+            -webkit-background-clip: text;
+            background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            opacity: 1;
+            transition: opacity $fastTrans;
         }
     }
-    transition: opacity $slowTrans;
 }
 .heartEmpty {
     color: black;
-    position: absolute;
-    right: 80px;
-    bottom: 70px;
-    transition: opacity $slowTrans;
+    position: relative;
+    transition: opacity $basicTrans;
 }
 .heartFilled {
+    background: linear-gradient(0deg, $purple, $pink);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
     opacity: 0;
-    position: absolute;
-    right: 80px;
-    bottom: 70px;
-    transition: opacity $slowTrans;
-    &:hover {
-        background: linear-gradient(0deg, $purple, $pink);
-        -webkit-background-clip: text;
-        background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        opacity: 1;
-        transition: opacity $basicTrans;
+    position:  absolute;
+    transition: opacity $basicTrans;
+}
+// Restaurants Images
+    .leDeliceImg{
+        background-image:  url("img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     }
-}
-.MenuImg {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 30px 30px 0 0;
-}
+    .francaiseImg{
+        background-image: url("img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    }
+    .enchanteeImg{
+        background-image: url("img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    }
+    .duGoutImg{
+        background-image: url("img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    }
+    .restauImg{
+        &:hover{
+            opacity: 0.69;
+            transition: $fastTrans;
+        }
+        border-radius: 30px 30px 0 0;
+        width: 100%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: $fastTrans;
+    }
 .blocNew {
-    @include NotifNew;
+    border-radius: 5px;
+    color: $darkGreen;
+    background-color: $green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    font-size: 2em;
+    padding: 10px 15px 10px 15px;
+    > p 
+    {
+            margin: 0;
+    }
+    margin:30px;
+    right: 0;
+    pointer-events: none;
 }
 
+
+// Footer
 .footerPage {
-    height: 400px;
     margin: 0;
     padding: 50px;
     background-color: $noir;
@@ -222,12 +367,55 @@ h6 {
     margin-bottom: 15px;
 }
 .footText {
-    font-size: 50px;
+    font-size: 1em;
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.616);
+    transition: $basicTrans;
+    &:hover{
+        color: white;
+        transition: $basicTrans;
+    }
 }
 .footIcon {
-    width: 60px;
-    font-size: 40px;
+    width: 25px;
+    font-size: 1em;
     color: white;
+}
+.footIcon-container{
+    display: flex;
+    justify-content: center;
+}
+
+// Scroll bar
+body::-webkit-scrollbar {
+    width: 10px; 
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(128, 128, 128, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+    border: 5px solid rgba(128, 128, 128, 0);
+    -webkit-transition: $basicTrans;
+    transition: $basicTrans;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+    border-radius: 20px;
+    border: 5px solid rgba(128, 128, 128, 0);
+    -webkit-transition: $basicTrans;
+    transition: $basicTrans;
+    cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb:focus {
+    background-color: black;
+    border-radius: 20px;
+    border: 5px solid rgba(128, 128, 128, 0);
+    -webkit-transition: $basicTrans;
+    transition: $basicTrans;
 }
