@@ -12,67 +12,137 @@
         width: 100%;
         background-size: cover;
         background-position: center;
-        height: 1000px;
+        height: 50vh;
+    }
+    .btn-return {
+        position: absolute;
+        left: 1em;
+    }
+    .arrow-icon {
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
     }
 
 // dish container
-    .dish-title {
-        font-size: 2em;
-        font-weight: 400;
-        margin: 0;
-        align-self: flex-start;
-    }
-    .dish-description {
-        font-size: 1.5em;
-        font-weight: 200;
-        margin: 0;
-        align-self: flex-end;
-        align-self: flex-start;
-    }
-    .dish-price-container {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-end;
+.restau-wrap {
+    border-radius: 69px 69px 0 0;
+    margin-top: -60px;
+    background-color: white;
+}
+.restau-title {
+    font-family: "Shrikhand", serif;
+    font-size: 3em;
+}
+.restau-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-title {
+    font-size: 1.5em;
+}
+.underline-title {
+    width: 4em;
+    height: 5px;
+    margin: 10px 0 10px 0;
+    background-color: $green;
+}
+.dish-title {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0;
+    align-self: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.dish-description {
+    font-size: 1.5em;
+    font-weight: 200;
+    margin: 0;
+    align-self: flex-end;
+    align-self: flex-start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+.dish-price-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
 
-    }
-    .dish-price {
-        font-size: 1.5em;
-        font-weight: 400;
-        align-self: flex-end;
-        margin: 0 4em 15px 0;
+}
+.dish-price {
+    font-size: 1.5em;
+    font-weight: 400;
+    align-self: flex-end;
+    margin: 0 2em 15px 0;
 
+}
+.dish-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
+    cursor: pointer;
+    margin-bottom: 25px;
+    &:hover .dish-price-wrap {
+        margin-right: 0;
     }
-    .dish-container {
-        width: 100%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        overflow: hidden;
-        border-radius: 20px;
-        box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
-        &:hover .dish-price-wrap {
-            transform: translateX(0);
-        }
+    &:hover .dish-icon {
+        transform: rotate(0deg);
     }
-    .dish-description-container {
-        display: flex;
-        justify-content: space-between;
-        flex-flow: column nowrap;
-        margin: 15px;
+}
+.dish-description-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    margin: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 0; 
+}
+.dish-validation-container {
+    background-color: $green;
+    color: white;
+    padding: 25px;
+}
+.dish-icon {
+    font-size: 2em;
+    align-self: center;
+    transform: rotate(180deg);
+    transition: $fastTrans;
+}
+.dish-price-wrap {
+    transition: $fastTrans;
+    margin-right: calc(-69px + -1em);
+}
+.btn-order {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 55px 0 55px 0;
+}
+@for $i from 1 through 10 {
+    .dish-anim-#{$i} {
+      animation:  1.5s  slide-in ease normal ;
+      animation-delay:  $i * (1s / 18);
     }
-    .dish-validation-container {
-        background-color: $green;
-        color: white;
-        padding: 25px;
-        
-    }
-    .dish-icon {
-        font-size: 2em;
-        align-self: center;
-        transform: rotate(-180deg);
-        transition: $fastTrans;
-    }
-    .dish-price-wrap {
-        transition: $fastTrans;
-        transform: translateX(69px) translateX(1em);
-    }
+  }
+
+  @keyframes slide-in {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }

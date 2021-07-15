@@ -20,9 +20,10 @@ h6 {
   }
 
   .Logo {
-    font-size: 2.5em !important;
+    width: 2.5em !important;
     margin-top: 20px;
     margin-bottom: 5px;
+    padding: 20px;
   }
 
   .footerLogo {
@@ -102,9 +103,12 @@ h6 {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  height: 7em;
+  width: 100%;
 }
 
 .Logo {
+  background-repeat: no-repeat;
   font-family: "Shrikhand", serif;
   font-size: 80px;
   text-decoration: none;
@@ -482,7 +486,47 @@ body::-webkit-scrollbar-thumb:focus {
   width: 100%;
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  height: 50vh;
+}
+
+.btn-return {
+  position: absolute;
+  left: 1em;
+}
+
+.arrow-icon {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+}
+
+.restau-wrap {
+  border-radius: 69px 69px 0 0;
+  margin-top: -60px;
+  background-color: white;
+}
+
+.restau-title {
+  font-family: "Shrikhand", serif;
+  font-size: 3em;
+}
+
+.restau-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-title {
+  font-size: 1.5em;
+}
+
+.underline-title {
+  width: 4em;
+  height: 5px;
+  margin: 10px 0 10px 0;
+  background-color: #99E2D0;
 }
 
 .dish-title {
@@ -490,6 +534,9 @@ body::-webkit-scrollbar-thumb:focus {
   font-weight: 400;
   margin: 0;
   align-self: flex-start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .dish-description {
@@ -498,6 +545,9 @@ body::-webkit-scrollbar-thumb:focus {
   margin: 0;
   align-self: flex-end;
   align-self: flex-start;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 
 .dish-price-container {
@@ -510,7 +560,7 @@ body::-webkit-scrollbar-thumb:focus {
   font-size: 1.5em;
   font-weight: 400;
   align-self: flex-end;
-  margin: 0 4em 15px 0;
+  margin: 0 2em 15px 0;
 }
 
 .dish-container {
@@ -521,9 +571,14 @@ body::-webkit-scrollbar-thumb:focus {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 25px;
 }
 .dish-container:hover .dish-price-wrap {
-  transform: translateX(0);
+  margin-right: 0;
+}
+.dish-container:hover .dish-icon {
+  transform: rotate(0deg);
 }
 
 .dish-description-container {
@@ -531,6 +586,10 @@ body::-webkit-scrollbar-thumb:focus {
   justify-content: space-between;
   flex-flow: column nowrap;
   margin: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .dish-validation-container {
@@ -542,13 +601,81 @@ body::-webkit-scrollbar-thumb:focus {
 .dish-icon {
   font-size: 2em;
   align-self: center;
-  transform: rotate(-180deg);
+  transform: rotate(180deg);
   transition: 0.3s ease;
 }
 
 .dish-price-wrap {
   transition: 0.3s ease;
-  transform: translateX(69px) translateX(1em);
+  margin-right: calc(-69px + -1em);
+}
+
+.btn-order {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 55px 0 55px 0;
+}
+
+.dish-anim-1 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.0555555556s;
+}
+
+.dish-anim-2 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.1111111111s;
+}
+
+.dish-anim-3 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.1666666667s;
+}
+
+.dish-anim-4 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.2222222222s;
+}
+
+.dish-anim-5 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.2777777778s;
+}
+
+.dish-anim-6 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.3333333333s;
+}
+
+.dish-anim-7 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.3888888889s;
+}
+
+.dish-anim-8 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.4444444444s;
+}
+
+.dish-anim-9 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.5s;
+}
+
+.dish-anim-10 {
+  animation: 1.5s slide-in ease normal;
+  animation-delay: 0.5555555556s;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

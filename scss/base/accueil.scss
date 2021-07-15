@@ -19,9 +19,10 @@ h6 {
         width: 100%;
     }
     .Logo{
-        font-size: 2.5em !important;
+        width: 2.5em !important;
         margin-top: 20px;
         margin-bottom: 5px;
+        padding: 20px;
     }
     .footerLogo{
         font-size: 1.5em !important;
@@ -92,8 +93,12 @@ h6 {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 3px 8px rgba($color: #000000, $alpha: 0.2);
+    height: 7em;
+    width: 100%;
 }
 .Logo {
+    
+    background-repeat: no-repeat;
     font-family: "Shrikhand", serif;
     font-size: 80px;
     text-decoration: none;
