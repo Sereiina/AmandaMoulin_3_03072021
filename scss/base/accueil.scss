@@ -32,6 +32,7 @@ h6 {
     .mq-wr{
         flex-flow:  column wrap;
     }
+    
 }
 @media screen and (min-width: 900px) /*desktop*/ {
     .nw{
@@ -51,9 +52,6 @@ h6 {
         margin: 15px !important;
         min-width: 300px;
         flex-grow: 1;
-    }
-    .blocNew{
-        font-size:  1em !important;
     }
 }
 
@@ -93,7 +91,7 @@ h6 {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 3px 8px rgba($color: #000000, $alpha: 0.2);
-    height: 7em;
+    height: 5.2em;
     width: 100%;
 }
 .Logo {
@@ -275,7 +273,7 @@ h6 {
 .heartIcon {
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2.3em;
     transition: opacity $basicTrans;
     margin-right: 20px;
     &:hover {
@@ -301,7 +299,7 @@ h6 {
 .heartFilled {
     background: linear-gradient(0deg, $purple, $pink);
     -webkit-background-clip: text;
-    background-clip: text; 
+    background-clip: text;  
     -webkit-text-fill-color: transparent;
     opacity: 0;
     position:  absolute;
@@ -341,7 +339,7 @@ h6 {
     justify-content: center;
     align-items: center;
     position:absolute;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 10px 15px 10px 15px;
     > p 
     {

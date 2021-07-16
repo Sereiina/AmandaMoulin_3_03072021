@@ -59,10 +59,6 @@ h6 {
     min-width: 300px;
     flex-grow: 1;
   }
-
-  .blocNew {
-    font-size: 1em !important;
-  }
 }
 .mq-wr {
   width: 100%;
@@ -103,7 +99,7 @@ h6 {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-  height: 7em;
+  height: 5.2em;
   width: 100%;
 }
 
@@ -156,6 +152,7 @@ h6 {
 .ButtonPink {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   color: white;
+  width: 250px;
   height: fit-content;
   border-radius: 70px;
   font-size: 1.2em;
@@ -325,7 +322,7 @@ h6 {
 .heartIcon {
   display: flex;
   justify-content: center;
-  font-size: 3em;
+  font-size: 2.3em;
   transition: opacity 0.5s ease;
   margin-right: 20px;
 }
@@ -396,7 +393,7 @@ h6 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 10px 15px 10px 15px;
   margin: 30px;
   right: 0;
@@ -508,7 +505,8 @@ body::-webkit-scrollbar-thumb:focus {
 
 .restau-title {
   font-family: "Shrikhand", serif;
-  font-size: 3em;
+  font-size: 1.5em;
+  margin-top: 1.3em;
 }
 
 .restau-container {
@@ -530,8 +528,8 @@ body::-webkit-scrollbar-thumb:focus {
 }
 
 .dish-title {
-  font-size: 2em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 600;
   margin: 0;
   align-self: flex-start;
   overflow: hidden;
@@ -540,7 +538,7 @@ body::-webkit-scrollbar-thumb:focus {
 }
 
 .dish-description {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 200;
   margin: 0;
   align-self: flex-end;
