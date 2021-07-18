@@ -19,9 +19,10 @@ h6 {
         width: 100%;
     }
     .Logo{
-        font-size: 2.5em !important;
+        width: 2.5em !important;
         margin-top: 20px;
         margin-bottom: 5px;
+        padding: 20px;
     }
     .footerLogo{
         font-size: 1.5em !important;
@@ -31,6 +32,7 @@ h6 {
     .mq-wr{
         flex-flow:  column wrap;
     }
+    
 }
 @media screen and (min-width: 900px) /*desktop*/ {
     .nw{
@@ -50,9 +52,6 @@ h6 {
         margin: 15px !important;
         min-width: 300px;
         flex-grow: 1;
-    }
-    .blocNew{
-        font-size:  1em !important;
     }
 }
 
@@ -92,8 +91,12 @@ h6 {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 3px 8px rgba($color: #000000, $alpha: 0.2);
+    height: 5.2em;
+    width: 100%;
 }
 .Logo {
+    
+    background-repeat: no-repeat;
     font-family: "Shrikhand", serif;
     font-size: 80px;
     text-decoration: none;
@@ -200,7 +203,7 @@ h6 {
     display: flex;
     justify-content: center;
 }
-
+ 
 
 
 //  Restaurants
@@ -270,7 +273,7 @@ h6 {
 .heartIcon {
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2.3em;
     transition: opacity $basicTrans;
     margin-right: 20px;
     &:hover {
@@ -296,7 +299,7 @@ h6 {
 .heartFilled {
     background: linear-gradient(0deg, $purple, $pink);
     -webkit-background-clip: text;
-    background-clip: text; 
+    background-clip: text;  
     -webkit-text-fill-color: transparent;
     opacity: 0;
     position:  absolute;
@@ -336,7 +339,7 @@ h6 {
     justify-content: center;
     align-items: center;
     position:absolute;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 10px 15px 10px 15px;
     > p 
     {
@@ -418,4 +421,93 @@ body::-webkit-scrollbar-thumb:focus {
     border: 5px solid rgba(128, 128, 128, 0);
     -webkit-transition: $basicTrans;
     transition: $basicTrans;
+}
+
+// page loader
+
+.circle-loader {
+    fill: transparent;
+    stroke: $purple;
+    stroke-width: 5;
+    animation: dash 1.5s ease infinite, spin 2s linear infinite, load-color 4.5s linear infinite;
+
+}
+ @keyframes dash {
+     0% {
+        stroke-dasharray: 1,95;
+        stroke-dashoffset: 0;
+     }
+     50% {
+        stroke-dasharray: 85,95;
+        stroke-dashoffset: -25;
+     }
+     100% {
+        stroke-dasharray: 85,95;
+        stroke-dashoffset: -90;
+     }
+ }
+ @keyframes spin {
+     0% {
+        transform:rotate(0deg);
+     }
+     100% {
+        transform:rotate(360deg);
+     } 
+ }
+@keyframes load-color {
+    0%, 30% {
+        stroke: $purple;
+    }
+    33%, 63% {
+        stroke: $pink;
+    }
+    67%, 96% {
+        stroke: $green;
+    }
+}
+.pre-loader-container {
+    position: fixed;
+    z-index: 4000;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    display: flex;
+    justify-content: center;
+    animation: loader-unload 3s linear 0s 1;
+    opacity: 0;
+    pointer-events: none;
+}
+.pre-loader-table {
+    height: 100%;
+}
+.circle-container {
+    transform: scale(1.3);
+}
+@keyframes loader-unload {
+    0%, 95% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes no-scroll {
+    0%, 99% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: auto;
+    }
+
+}
+body {
+    animation: no-scroll 3s linear 0s 1;
+    overflow: auto;
+}
+.anti-no-scroll {
+    overflow: auto !important;
 }
