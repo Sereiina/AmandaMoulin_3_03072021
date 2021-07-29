@@ -261,12 +261,13 @@ h6 {
 }
 .rf-Title{
     color: black;
-    font-size: 1.5em;
-    margin: 20px 0px 10px 0px;
+    font-size: 1.4em;
+    margin: 17px 0px 5px 0px;
 }
 .rf-Text{
     color: black;
-    font-size: 1em;
+    font-weight: 300;
+    font-size: 1.2em;
     margin: 0;
     margin: 0px 0px 10px 0px;
 }
@@ -325,11 +326,21 @@ h6 {
         }
         border-radius: 30px 30px 0 0;
         width: 100%;
-        height: 350px;
-        background-position: center;
-        background-size: cover;
+        height: 200px;
+        background-position: 25% 100%;
+        background-size: 105%;
         background-repeat: no-repeat;
         transition: $fastTrans;
+    }
+    #enchantee-id-img {
+        background-position: 25% 61%;
+       
+    }
+    @media screen and (min-width: 900px) {
+        .restauImg {
+            background-position: center;
+            background-size: cover;
+        }
     }
 .blocNew {
     border-radius: 5px;
@@ -339,8 +350,8 @@ h6 {
     justify-content: center;
     align-items: center;
     position:absolute;
-    font-size: 1.5em;
-    padding: 10px 15px 10px 15px;
+    font-size: 1em;
+    padding: 8px 20px 8px 20px;
     > p 
     {
             margin: 0;
@@ -502,7 +513,6 @@ body::-webkit-scrollbar-thumb:focus {
     100% {
         overflow: auto;
     }
-
 }
 body {
     animation: no-scroll 3s linear 0s 1;

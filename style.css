@@ -152,7 +152,7 @@ h6 {
 .ButtonPink {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   color: white;
-  width: 250px;
+  width: 275px;
   height: fit-content;
   border-radius: 70px;
   font-size: 1.2em;
@@ -308,13 +308,14 @@ h6 {
 
 .rf-Title {
   color: black;
-  font-size: 1.5em;
-  margin: 20px 0px 10px 0px;
+  font-size: 1.4em;
+  margin: 17px 0px 5px 0px;
 }
 
 .rf-Text {
   color: black;
-  font-size: 1em;
+  font-weight: 300;
+  font-size: 1.2em;
   margin: 0;
   margin: 0px 0px 10px 0px;
 }
@@ -374,9 +375,9 @@ h6 {
 .restauImg {
   border-radius: 30px 30px 0 0;
   width: 100%;
-  height: 350px;
-  background-position: center;
-  background-size: cover;
+  height: 200px;
+  background-position: 25% 100%;
+  background-size: 105%;
   background-repeat: no-repeat;
   transition: 0.3s ease;
 }
@@ -385,6 +386,16 @@ h6 {
   transition: 0.3s ease;
 }
 
+#enchantee-id-img {
+  background-position: 25% 61%;
+}
+
+@media screen and (min-width: 900px) {
+  .restauImg {
+    background-position: center;
+    background-size: cover;
+  }
+}
 .blocNew {
   border-radius: 5px;
   color: #098d6d;
@@ -393,8 +404,8 @@ h6 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  font-size: 1.5em;
-  padding: 10px 15px 10px 15px;
+  font-size: 1em;
+  padding: 8px 20px 8px 20px;
   margin: 30px;
   right: 0;
   pointer-events: none;
@@ -573,7 +584,8 @@ body {
   width: 100%;
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  background-repeat: no-repeat;
+  height: 41vh;
 }
 
 .btn-return {
@@ -592,7 +604,7 @@ body {
 }
 
 .restau-wrap {
-  border-radius: 69px 69px 0 0;
+  border-radius: 55px 55px 0 0;
   margin-top: -60px;
   background-color: white;
 }
@@ -622,7 +634,7 @@ body {
 }
 
 .dish-title {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 600;
   margin: 0;
   align-self: flex-start;
@@ -632,8 +644,8 @@ body {
 }
 
 .dish-description {
-  font-size: 1.2em;
-  font-weight: 200;
+  font-size: 1em;
+  font-weight: 300;
   margin: 0;
   align-self: flex-end;
   align-self: flex-start;
@@ -649,10 +661,10 @@ body {
 }
 
 .dish-price {
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 600;
   align-self: flex-end;
-  margin: 0 2em 15px 0;
+  margin: 0 21px 15px 0;
 }
 
 .dish-container {
@@ -707,6 +719,25 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   margin: 55px 0 55px 0;
+}
+
+.button-pink-order {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  color: white;
+  width: 250px;
+  height: fit-content;
+  border-radius: 70px;
+  font-size: 1.2em;
+  overflow-wrap: break-word;
+  border: none;
+  padding: 20px 30px 20px 30px;
+  transition: 0.3s ease;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+}
+.button-pink-order:hover {
+  opacity: 0.69;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.3, -0.19, 0.17, 1.26);
 }
 
 .dish-anim-1 {
