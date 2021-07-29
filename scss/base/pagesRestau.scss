@@ -114,7 +114,7 @@
     font-size: 2em;
     align-self: center;
     transform: rotate(180deg);
-    transition: $fastTrans;
+    transition: 0.5s ease-out;
 }
 .dish-price-wrap {
     transition: $fastTrans;
